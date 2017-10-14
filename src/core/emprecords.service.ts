@@ -17,7 +17,7 @@ export class EmpRecordsService {
 	        console.log(window);
 	        let formData:FormData = new FormData();
 	        formData.append('fileUpload', file, file.name);
-	        return this.http.post(`${this.config}/Wipro-EmpData/submit`, formData)
+	        return this.http.post(`${this.config}/empData/submit`, formData)
 	            .map(res => res)
 	            .catch(error => Observable.throw(error))
 	    }
